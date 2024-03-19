@@ -1,0 +1,9 @@
+.btn-icon {
+    color: inherit; /* Hereda el color del icono */
+    border-color: transparent; /* Quita el borde del botón */
+  }
+  
+  .btn-icon:hover {
+    background-color: transparent; /* Quita el fondo del botón al pasar el mouse */
+  }
+  
