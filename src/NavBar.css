@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   background-color: #333; /* Color de fondo del sidebar */
-  color: white; /* Color del texto del Menú */
+  color: rgb(0, 0, 0); /* Color del texto del Menú */
   padding: 10px;
 }
 

@@ -50,7 +50,7 @@ const EditAttendance = ({ rowData, setFlag }) => {
     };
 
     return (
-        <div className="card flex justify-content-center">
+        <div >
             <Button
                 label="Editar"
                 icon="pi pi-user-edit"

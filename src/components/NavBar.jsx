@@ -40,6 +40,8 @@ const NavBar = () => {
   ];
 
   return (
+    
+
     <div className="card">
       <div className="menu-bar">
         <span className="menu-title">Menú</span>

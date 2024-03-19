@@ -108,6 +108,15 @@ const Table = ({ flag, setFlag }) => {
             body={(rowData) => (
               <div className="flex items-center">
                 <EditAttendance rowData={rowData} setFlag={setFlag} />
+                
+              </div>
+            )}
+          ></Column>
+           <Column
+        
+            body={(rowData) => (
+              <div className="flex items-center">
+               
                 <DeleteAttendance rowData={rowData} setFlag={setFlag} />
               </div>
             )}
