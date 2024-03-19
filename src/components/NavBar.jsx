@@ -11,13 +11,13 @@ const NavBar = () => {
       id: "home",
       label: "Inicio",
       icon: "pi pi-home",
-      url: "../views/App",
+      url: "/",
     },
     {
       id: "events",
       label: "Eventos",
       icon: "pi pi-calendar",
-      url: "../views/Events.jsx",
+      url: "/events",
     },
     {
       id: "discipline",
