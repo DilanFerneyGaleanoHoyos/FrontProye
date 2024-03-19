@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import Table from "../components/Attendance/Table";
-import Form from "../components/Attendance/form";
+import Form from "../components/Attendance/Form";
 
 
 

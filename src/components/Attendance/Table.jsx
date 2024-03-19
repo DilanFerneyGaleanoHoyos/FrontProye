@@ -3,7 +3,7 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
-import EditEvent from "../Affiliate/EditAffiliate";
+import EditAttendance from "./EditAttendance";
 import DeleteAffiliate from "../Affiliate/DeleteAffiliate";
 
 const findAllAttendances = () => {
@@ -107,7 +107,7 @@ const Table = ({ flag, setFlag }) => {
             header="Opciones"
             body={(rowData) => (
               <div className="flex items-center">
-                <EditEvent rowData={rowData} setFlag={setFlag} />
+                <EditAttendance rowData={rowData} setFlag={setFlag} />
                 <DeleteAffiliate rowData={rowData} setFlag={setFlag} />
               </div>
             )}
