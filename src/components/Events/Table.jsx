@@ -4,6 +4,7 @@ import { Column } from "primereact/column";
 import { Dialog } from "primereact/dialog";
 import EditEvent from "../Events/EditEvents";
 import DeleteEvent from "../Events/DeleteEvents";
+import "../MainPage.css"; 
 
 const findAllEvents = () => {
   return fetch('https://back-proyecto.vercel.app/event', {
@@ -46,7 +47,7 @@ const Table = ({ flag, setFlag }) => {
 
 
   return (
-    <div className="card">
+    <div className="card" >
       {loading ? ( // Mostrar un mensaje de carga mientras se están cargando los datos
         <div>Cargando...</div>
       ) : (

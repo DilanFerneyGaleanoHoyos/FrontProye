@@ -35,7 +35,8 @@ const TableDiscipline = ({ flag, setFlag }) => {
     findDisciplineById(disciplineId)
       .then((discipline) => {
         setSelectedDiscipline(discipline);
-        findAllAffiliates()
+        // Llama a findAllAffiliates con el ID de la disciplina seleccionada
+        findAllAffiliates(disciplineId)
           .then(result => {
             setAffiliates(result);
             setShowAffiliatesDialog(true);
@@ -79,6 +80,15 @@ const TableDiscipline = ({ flag, setFlag }) => {
               body={(rowData) => (
                 <>
                   <EditEvent rowData={rowData} setFlag={setFlag} />
+                  
+                </>
+              )}
+            ></Column>
+             <Column
+             
+              body={(rowData) => (
+                <>
+             
                   <DeleteEvent rowData={rowData} setFlag={setFlag} />
                 </>
               )}

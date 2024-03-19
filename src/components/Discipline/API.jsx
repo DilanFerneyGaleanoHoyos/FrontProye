@@ -1,18 +1,26 @@
-const findAllAffiliates = () => {
-    return fetch('https://back-proyecto.vercel.app/affiliate', {
-      method: 'GET',
-      headers: {
-        "Content-Type": "application/json"
+// En tu archivo API.js
+
+const findAllAffiliates = (disciplineId) => {
+  return fetch(`https://back-proyecto.vercel.app/affiliate?disciplineId=${disciplineId}`, {
+    method: 'GET',
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+    .then(result => result.json())
+    .then(result => {
+      if (result.state) {
+        // Filtrar los afiliados por la disciplina especificada
+        const filteredAffiliates = result.data.filter(affiliate => affiliate.discipline === disciplineId);
+        return filteredAffiliates;
       }
-    })
-      .then(result => result.json())
-      .then(result => {
-        if (result.state) {
-          return result.data;
-        }
-        throw new Error('No se pudieron cargar los afiliados');
-      });
-  };
+      throw new Error('No se pudieron cargar los afiliados');
+    });
+};
+
+
+
+
   
   const findDisciplineById = (disciplineId) => {
     return fetch(`https://back-proyecto.vercel.app/discipline/${disciplineId}`, {

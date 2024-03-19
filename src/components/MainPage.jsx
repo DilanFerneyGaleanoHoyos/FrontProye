@@ -3,12 +3,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BsPeople, BsCalendar, BsClock, BsShield } from "react-icons/bs";
 import "./MainPage.css"; // Archivo de estilos personalizados
 
+
+
 function MainPage() {
   return (
-    <div className="container">
-      <div className="card-body text-center">
-        <h1 className="card-title font-family mb-4">Bienvenidos al Servicio de Manejo del Club Deportivo</h1>
-      </div>
+    
+    <div className="container" >
+    <div className="card-body text-center">
+      <h1 className="card-title font-family mb-4">Bienvenidos al Servicio de Manejo del Club Deportivo</h1>
+      <p className="mi-clase-truculenta">
+        En este apartado, podrás realizar consultas, agregar, eliminar y modificar eventos, afiliados, asistencias y disciplinas. 
+        Descubre todas las funcionalidades disponibles a continuación:
+      </p>
+    </div>
 
       <div className="row mt-5">
         <div className="col-md-3 d-flex justify-content-center align-items-center">
