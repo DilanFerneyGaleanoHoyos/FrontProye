@@ -4,7 +4,7 @@ import { Column } from "primereact/column";
 import { Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
 import EditAttendance from "./EditAttendance";
-import DeleteAffiliate from "../Affiliate/DeleteAffiliate";
+import DeleteAttendance from "./DeleteAttendance";
 
 const findAllAttendances = () => {
   return fetch('https://back-proyecto.vercel.app/attendance', {
@@ -108,7 +108,7 @@ const Table = ({ flag, setFlag }) => {
             body={(rowData) => (
               <div className="flex items-center">
                 <EditAttendance rowData={rowData} setFlag={setFlag} />
-                <DeleteAffiliate rowData={rowData} setFlag={setFlag} />
+                <DeleteAttendance rowData={rowData} setFlag={setFlag} />
               </div>
             )}
           ></Column>
