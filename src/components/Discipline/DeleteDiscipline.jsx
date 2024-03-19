@@ -36,7 +36,7 @@ const DeleteDiscipline = ({ rowData, setFlag }) => {
   return (
     <div className="card flex justify-content-center">
       <Button
-        label="Delete"
+        label="Eliminar"
         icon="pi pi-eraser"
         severity="danger"
         onClick={() => setVisible(true)}
@@ -52,19 +52,19 @@ const DeleteDiscipline = ({ rowData, setFlag }) => {
           <i className="pi pi-exclamation-triangle" style={{ fontSize: "2em", marginBottom: "1em" }}></i>
           <p style={{ textAlign: "center" }}>¿Está seguro de que desea eliminar esta disciplina?</p>
           <div className="flex justify-content-center" style={{ width: "100%" }}>
-          <center > <Button
+            <center > <Button
               label="Eliminar"
               icon="pi pi-eraser"
               severity="danger"
               onClick={() => handleDeleteDiscipline()}
               className="mr-2"
             />
-            <Button
-              label="Cancelar"
-              icon="pi pi-times"
-              onClick={() => setVisible(false)}
-              className="p-button-text"
-            /></center>
+              <Button
+                label="Cancelar"
+                icon="pi pi-times"
+                onClick={() => setVisible(false)}
+                className="p-button-text"
+              /></center>
           </div>
         </div>
       </Dialog>

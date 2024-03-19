@@ -13,13 +13,13 @@ const findAllAffiliates = () => {
       "Content-Type": "application/json"
     }
   })
-  .then(result => result.json())
-  .then(result => {
-    if (result.state) {
-      return result.data;
-    }
-    throw new Error('No se pudieron cargar los afiliados');
-  });
+    .then(result => result.json())
+    .then(result => {
+      if (result.state) {
+        return result.data;
+      }
+      throw new Error('No se pudieron cargar los afiliados');
+    });
 };
 
 const findDisciplineById = (disciplineId) => {
@@ -29,13 +29,13 @@ const findDisciplineById = (disciplineId) => {
       "Content-Type": "application/json"
     }
   })
-  .then(result => result.json())
-  .then(result => {
-    if (result.state) {
-      return result.data;
-    }
-    throw new Error('No se pudo encontrar la disciplina');
-  });
+    .then(result => result.json())
+    .then(result => {
+      if (result.state) {
+        return result.data;
+      }
+      throw new Error('No se pudo encontrar la disciplina');
+    });
 };
 
 const Table = ({ flag, setFlag }) => {
@@ -69,7 +69,7 @@ const Table = ({ flag, setFlag }) => {
   return (
     <div className="card">
       {loading ? (
-        <div>Loading...</div>
+        <div>Cargando...</div>
       ) : (
         <DataTable
           value={affiliates}
@@ -77,59 +77,59 @@ const Table = ({ flag, setFlag }) => {
           sortField="id"
           sortOrder={1}
         >
-          <Column field="document" header="Document" ></Column >
-          <Column field="fname" header="First Name"></Column>
-          <Column field="lname" header="Last Name"></Column>
+          <Column field="document" header="Identificacion" ></Column >
+          <Column field="fname" header="Nombre"></Column>
+          <Column field="lname" header="Apellido"></Column>
           <Column
-  field="genre"
-  header="Genre"
-  body={(rowData) => (
-    <span>{rowData.genre ? "Masculino" : "Femenino"}</span>
-  )}
->
-</Column> 
-          <Column field="phone" header="Phone"></Column> 
-         
+            field="genre"
+            header="Género"
+            body={(rowData) => (
+              <span>{rowData.genre ? "Masculino" : "Femenino"}</span>
+            )}
+          >
+          </Column>
+          <Column field="phone" header="Teléfono"></Column>
+
           <Column
             header="Disciplina"
             body={(rowData) => (
               <Button
-                label="Disciplina Info"
+                label="Informacion de la Disciplina"
                 icon="pi pi-info-circle"
                 onClick={() => showDisciplineInfo(rowData.discipline)}
               />
             )}
           ></Column>
-        <Column
-  header="Opciones"
-  body={(rowData) => (
-    <div className="flex items-center">
-      <div className="flex space-x-2">
-        <EditEvent rowData={rowData} setFlag={setFlag} />
-       
-      </div>
-    </div>
+          <Column
+            header="Opciones"
+            body={(rowData) => (
+              <div className="flex items-center">
+                <div className="flex space-x-2">
+                  <EditEvent rowData={rowData} setFlag={setFlag} />
+
+                </div>
+              </div>
             )}
           ></Column>
-           <Column
-  
-  body={(rowData) => (
-    <div className="flex items-center">
-      <div className="flex space-x-2">
-     
-        <DeleteAffiliate rowData={rowData} setFlag={setFlag} />
-      </div>
-    </div>
+          <Column
+
+            body={(rowData) => (
+              <div className="flex items-center">
+                <div className="flex space-x-2">
+
+                  <DeleteAffiliate rowData={rowData} setFlag={setFlag} />
+                </div>
+              </div>
             )}
           ></Column>
         </DataTable>
       )}
       <Dialog
-        header="Discipline Information"
-        visible={selectedDiscipline !== null} 
+        header="Informacion de la Disciplina"
+        visible={selectedDiscipline !== null}
         modal={true}
         style={{ width: "33vw" }}
-        onHide={() => setSelectedDiscipline(null)} 
+        onHide={() => setSelectedDiscipline(null)}
       >
         <div>
           {selectedDiscipline && (

@@ -13,14 +13,14 @@ const findAllAttendances = () => {
       "Content-Type": "application/json"
     }
   })
-  .then(result => result.json())
-  .then(result => {
-    if (result.state) {
-      return result.data;
-    }
-    throw new Error('No se pudieron cargar las asistencias');
-  })
-  .catch(err => console.log(err));
+    .then(result => result.json())
+    .then(result => {
+      if (result.state) {
+        return result.data;
+      }
+      throw new Error('No se pudieron cargar las asistencias');
+    })
+    .catch(err => console.log(err));
 };
 
 const findAllEvents = () => {
@@ -30,14 +30,14 @@ const findAllEvents = () => {
       "Content-Type": "application/json"
     }
   })
-  .then(result => result.json())
-  .then(result => {
-    if (result.state) {
-      return result.data;
-    }
-    throw new Error('No se pudieron cargar los eventos');
-  })
-  .catch(err => console.log(err));
+    .then(result => result.json())
+    .then(result => {
+      if (result.state) {
+        return result.data;
+      }
+      throw new Error('No se pudieron cargar los eventos');
+    })
+    .catch(err => console.log(err));
 };
 
 const findAllAffiliates = () => {
@@ -47,14 +47,14 @@ const findAllAffiliates = () => {
       "Content-Type": "application/json"
     }
   })
-  .then(result => result.json())
-  .then(result => {
-    if (result.state) {
-      return result.data;
-    }
-    throw new Error('No se pudieron cargar los afiliados');
-  })
-  .catch(err => console.log(err));
+    .then(result => result.json())
+    .then(result => {
+      if (result.state) {
+        return result.data;
+      }
+      throw new Error('No se pudieron cargar los afiliados');
+    })
+    .catch(err => console.log(err));
 };
 
 const Table = ({ flag, setFlag }) => {
@@ -80,7 +80,7 @@ const Table = ({ flag, setFlag }) => {
   return (
     <div className="card">
       {loading ? (
-        <div>Loading...</div>
+        <div>Cargando...</div>
       ) : (
         <DataTable
           value={attendances}
@@ -88,23 +88,23 @@ const Table = ({ flag, setFlag }) => {
           sortField="position"
           sortOrder={1}
         >
-          <Column field="position" header="Position" ></Column >
+          <Column field="position" header="Posición" ></Column >
           <Column
-            header="Affiliate"
+            header="Afiliado"
             body={(rowData) => {
               const affiliate = affiliates.find(a => a._id === rowData.affiliate);
               return <span>{affiliate.fname} {affiliate.lname}</span>;
             }}
           ></Column>
           <Column
-            header="Event"
+            header="Evento"
             body={(rowData) => {
               const event = events.find(e => e._id === rowData.event);
               return <span>{event.name}</span>;
             }}
           ></Column>
           <Column
-            header="Options"
+            header="Opciones"
             body={(rowData) => (
               <div className="flex items-center">
                 <EditEvent rowData={rowData} setFlag={setFlag} />
@@ -115,11 +115,11 @@ const Table = ({ flag, setFlag }) => {
         </DataTable>
       )}
       <Dialog
-        header="Attendance Information"
-        visible={selectedAttendance !== null} 
+        header="Informacion de la Asistencia"
+        visible={selectedAttendance !== null}
         modal={true}
         style={{ width: "33vw" }}
-        onHide={() => setSelectedAttendance(null)} 
+        onHide={() => setSelectedAttendance(null)}
       >
         <div>
           {selectedAttendance && (

@@ -59,13 +59,13 @@ const EditEvent = ({ rowData, setFlag }) => {
   return (
     <div className="card flex justify-content-center">
       <Button
-        label="Edit"
+        label="Editar"
         icon="pi pi-user-edit"
         severity="warning"
         onClick={() => setVisible(true)}
       />
       <Dialog
-        header="Edit Event"
+        header="Editar Evento"
         visible={visible}
         modal={false}
         style={{ width: "50vw" }}
@@ -81,28 +81,28 @@ const EditEvent = ({ rowData, setFlag }) => {
             <span className="p-inputgroup-addon">
               <i className="pi pi-user"></i>
             </span>
-            <InputText value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" />
+            <InputText value={name} onChange={(e) => setName(e.target.value)} placeholder="Nombre" />
           </div>
 
           <div className="p-inputgroup flex-1">
             <span className="p-inputgroup-addon">
               <i className="pi pi-calendar"></i>
             </span>
-            <InputText value={date} onChange={(e) => setDate(e.target.value)} placeholder="Date" />
+            <InputText value={date} onChange={(e) => setDate(e.target.value)} placeholder="Fecha" />
           </div>
 
           <div className="p-inputgroup flex-1">
             <span className="p-inputgroup-addon">
               <i className="pi pi-map-marker"></i>
             </span>
-            <InputText value={site} onChange={(e) => setSite(e.target.value)} placeholder="Site" />
+            <InputText value={site} onChange={(e) => setSite(e.target.value)} placeholder="Lugar" />
           </div>
 
           <div className="p-inputgroup flex-1">
             <span className="p-inputgroup-addon">
               <i className="pi pi-home"></i>
             </span>
-            <InputText value={city} onChange={(e) => setCity(e.target.value)} placeholder="City" />
+            <InputText value={city} onChange={(e) => setCity(e.target.value)} placeholder="Ciudad" />
           </div>
         </div>
         <br></br>

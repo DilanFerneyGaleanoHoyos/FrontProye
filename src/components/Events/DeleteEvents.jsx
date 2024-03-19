@@ -36,7 +36,7 @@ const DeleteEvent = ({ rowData, setFlag }) => {
   return (
     <div className="card flex justify-content-center">
       <Button
-        label="Delete"
+        label="Eliminar"
         icon="pi pi-eraser"
         severity="danger"
         onClick={() => setVisible(true)}
@@ -51,7 +51,7 @@ const DeleteEvent = ({ rowData, setFlag }) => {
         <div className="p-inputgroup flex-1 flex-column align-items-center">
           <i className="pi pi-exclamation-triangle" style={{ fontSize: "2em", marginBottom: "1em" }}></i>
           <p style={{ textAlign: "center" }}>¿Está seguro de que desea eliminar este evento?</p>
-         <center> <div className="flex justify-content-center" style={{ width: "100%"  }}>
+          <center> <div className="flex justify-content-center" style={{ width: "100%" }}>
             <Button
               label="Eliminar"
               icon="pi pi-eraser"

@@ -16,7 +16,7 @@ const findAllDisciplines = () => {
       if (result.state) {
         return result.data.map(discipline => ({
           ...discipline,
-          id: discipline._id 
+          id: discipline._id
         }));
       }
       throw new Error("No se pudo cargar las disciplinas");
@@ -47,7 +47,7 @@ const TableDiscipline = ({ flag, setFlag }) => {
   return (
     <div className="card">
       {loading ? (
-        <div>Loading...</div>
+        <div>Cargando...</div>
       ) : (
         <DataTable
           value={disciplines}
@@ -56,27 +56,27 @@ const TableDiscipline = ({ flag, setFlag }) => {
           sortOrder={1}
         >
           <Column field="id" header="ID"></Column>
-          <Column field="name" header="Name"></Column>
+          <Column field="name" header="Nombre"></Column>
           <Column field="individual" header="Individual" body={renderIndividual}></Column>
           <Column
             header="Opciones"
             body={(rowData) => (
               <>
                 <EditEvent rowData={rowData} setFlag={setFlag} />
-             
 
-                
+
+
               </>
             )}
           ></Column>
           <Column
-         
+
             body={(rowData) => (
               <>
-                
+
                 <DeleteEvent rowData={rowData} setFlag={setFlag} />
 
-                
+
               </>
             )}
           ></Column>

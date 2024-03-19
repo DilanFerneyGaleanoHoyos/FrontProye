@@ -66,7 +66,7 @@ const Form = ({ setFlag }) => {
       };
       const id = discipline ? discipline._id : null;
       saveAffiliate(affiliateData, setFlag, setVisible, id);
-      
+
       // Restablecer los estados a los valores iniciales después de guardar
       setDocument(0);
       setFname("");
@@ -93,8 +93,8 @@ const Form = ({ setFlag }) => {
         style={{ width: "50vw" }}
         onHide={() => setVisible(false)}
       >
-         <div className="card flex justify-content-center">
-         <div className="p-inputgroup flex-1">
+        <div className="card flex justify-content-center">
+          <div className="p-inputgroup flex-1">
             <span className="p-inputgroup-addon">
               <i className="pi pi-id-card"></i>
             </span>
@@ -106,7 +106,7 @@ const Form = ({ setFlag }) => {
             </span>
             <InputText value={fname} onChange={(e) => setFname(e.target.value)} placeholder="Nombre" />
           </div>
-          
+
           <div className="p-inputgroup flex-1">
             <span className="p-inputgroup-addon">
               <i className="pi pi-user"></i>
@@ -115,24 +115,24 @@ const Form = ({ setFlag }) => {
           </div>
 
           <div className="p-inputgroup flex-1">
-  <span className="p-inputgroup-addon">
-    <i className="pi pi-book"></i>
-  </span>
-  <InputText 
-    value={genre} 
-    onChange={(e) => {
-      const lowerCaseValue = e.target.value.toLowerCase();
-      if (lowerCaseValue === 'masculino') {
-        setGenre(true);
-      } else if (lowerCaseValue === 'femenino') {
-        setGenre(false);
-      } else {
-        setGenre(e.target.value); // Si no es "masculino" ni "femenino", mantén el valor tal como está
-      }
-    }} 
-    placeholder="Género" 
-  />
-</div>
+            <span className="p-inputgroup-addon">
+              <i className="pi pi-book"></i>
+            </span>
+            <InputText
+              value={genre}
+              onChange={(e) => {
+                const lowerCaseValue = e.target.value.toLowerCase();
+                if (lowerCaseValue === 'masculino') {
+                  setGenre(true);
+                } else if (lowerCaseValue === 'femenino') {
+                  setGenre(false);
+                } else {
+                  setGenre(e.target.value); // Si no es "masculino" ni "femenino", mantén el valor tal como está
+                }
+              }}
+              placeholder="Género"
+            />
+          </div>
 
 
           <div className="p-inputgroup flex-1">
@@ -170,7 +170,7 @@ const Form = ({ setFlag }) => {
             className="p-button-text"
           />
         </div>
-     
+
       </Dialog>
     </>
   );

@@ -12,16 +12,16 @@ const findAllEvents = () => {
       "Content-Type": "application/json"
     }
   })
-  .then(result => result.json())
-  .then(result => {
-    if (result.state) {
-      return result.data.map(event => ({
-        ...event,
-        id: event._id // Utiliza el _id devuelto por el servidor como el id único para cada evento
-      }));
-    }
-    throw new Error('No se pudo cargar los eventos');
-  });
+    .then(result => result.json())
+    .then(result => {
+      if (result.state) {
+        return result.data.map(event => ({
+          ...event,
+          id: event._id // Utiliza el _id devuelto por el servidor como el id único para cada evento
+        }));
+      }
+      throw new Error('No se pudo cargar los eventos');
+    });
 };
 
 
@@ -48,46 +48,46 @@ const Table = ({ flag, setFlag }) => {
   return (
     <div className="card">
       {loading ? ( // Mostrar un mensaje de carga mientras se están cargando los datos
-        <div>Loading...</div>
+        <div>Cargando...</div>
       ) : (
         <DataTable
-        value={events}
-        tableStyle={{ minWidth: "50rem" }}
-        sortField="id"
-        sortOrder={1}
-      >
-       <Column field="id" header="ID" ></Column >
-        <Column field="name" header="Name"></Column>
-        <Column field="date" header="Date"></Column>
-        <Column field="site" header="Site"></Column> 
-        <Column field="city" header="City"></Column> 
-        <Column
+          value={events}
+          tableStyle={{ minWidth: "50rem" }}
+          sortField="id"
+          sortOrder={1}
+        >
+          <Column field="id" header="ID" ></Column >
+          <Column field="name" header="Nombre"></Column>
+          <Column field="date" header="Fecha"></Column>
+          <Column field="site" header="Lugar"></Column>
+          <Column field="city" header="Ciudad"></Column>
+          <Column
             header="Opciones"
             body={(rowData) => (
               <>
                 <EditEvent rowData={rowData} setFlag={setFlag} />
-              
+
               </>
             )}
           ></Column>
-           <Column
-          
+          <Column
+
             body={(rowData) => (
               <>
-               
+
                 <DeleteEvent rowData={rowData} setFlag={setFlag} />
               </>
             )}
           ></Column>
-      </DataTable>
-      
+        </DataTable>
+
       )}
       <Dialog
-        header="Edit Event"
+        header="Editar Evento"
         visible={false} // Asegúrate de manejar la visibilidad correctamente
         modal={false}
         style={{ width: "50vw" }}
-        onHide={() => {}} // Implementa la lógica para ocultar el diálogo
+        onHide={() => { }} // Implementa la lógica para ocultar el diálogo
       ></Dialog>
     </div>
   );

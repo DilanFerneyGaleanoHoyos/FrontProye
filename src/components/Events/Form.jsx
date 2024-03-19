@@ -62,36 +62,36 @@ const Form = ({ setFlag }) => {
         style={{ width: "50vw" }}
         onHide={() => setVisible(false)}
       >
-         <div className="card flex justify-content-center"></div>
-        
-         <div className="p-inputgroup flex-1">
-            <span className="p-inputgroup-addon">
-              <i className="pi pi-user"></i>
-            </span>
-            <InputText value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" />
-          </div>
+        <div className="card flex justify-content-center"></div>
 
-          <div className="p-inputgroup flex-1">
-            <span className="p-inputgroup-addon">
-              <i className="pi pi-calendar"></i>
-            </span>
-            <InputText value={date} onChange={(e) => setDate(e.target.value)} placeholder="Date" />
-          </div>
+        <div className="p-inputgroup flex-1">
+          <span className="p-inputgroup-addon">
+            <i className="pi pi-user"></i>
+          </span>
+          <InputText value={name} onChange={(e) => setName(e.target.value)} placeholder="Nombre" />
+        </div>
 
-          <div className="p-inputgroup flex-1">
-            <span className="p-inputgroup-addon">
-              <i className="pi pi-map-marker"></i>
-            </span>
-            <InputText value={site} onChange={(e) => setSite(e.target.value)} placeholder="Site" />
-          </div>
+        <div className="p-inputgroup flex-1">
+          <span className="p-inputgroup-addon">
+            <i className="pi pi-calendar"></i>
+          </span>
+          <InputText value={date} onChange={(e) => setDate(e.target.value)} placeholder="Fecha" />
+        </div>
 
-          <div className="p-inputgroup flex-1">
-            <span className="p-inputgroup-addon">
-              <i className="pi pi-home"></i>
-            </span>
-            <InputText value={city} onChange={(e) => setCity(e.target.value)} placeholder="City" />
-          </div>
-        
+        <div className="p-inputgroup flex-1">
+          <span className="p-inputgroup-addon">
+            <i className="pi pi-map-marker"></i>
+          </span>
+          <InputText value={site} onChange={(e) => setSite(e.target.value)} placeholder="Lugar" />
+        </div>
+
+        <div className="p-inputgroup flex-1">
+          <span className="p-inputgroup-addon">
+            <i className="pi pi-home"></i>
+          </span>
+          <InputText value={city} onChange={(e) => setCity(e.target.value)} placeholder="Ciudad" />
+        </div>
+
         <br></br>
         <div className="p-d-flex p-jc-end">
           <Button
@@ -100,7 +100,7 @@ const Form = ({ setFlag }) => {
             onClick={handleSaveEvent}
             className="p-button-success"
           />
-          
+
           <Button
             label="Cancelar"
             icon="pi pi-times"

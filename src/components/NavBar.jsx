@@ -9,31 +9,31 @@ const NavBar = () => {
   const items = [
     {
       id: "home",
-      label: "Home",
+      label: "Inicio",
       icon: "pi pi-home",
       url: "/",
     },
     {
       id: "events",
-      label: "Events",
+      label: "Eventos",
       icon: "pi pi-calendar",
       url: "/events",
     },
     {
       id: "discipline",
-      label: "Discipline",
+      label: "Disciplinas",
       icon: "pi pi-book",
       url: "/discipline",
     },
     {
       id: "affiliate",
-      label: "Affiliate",
+      label: "Afiliados",
       icon: "pi pi-users",
       url: "/affiliate",
     },
     {
       id: "attendance",
-      label: "Attendance",
+      label: "Asistencias",
       icon: "pi pi-check",
       url: "/attendance",
     },

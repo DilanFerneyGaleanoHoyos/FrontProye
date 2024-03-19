@@ -50,13 +50,13 @@ const EditDiscipline = ({ rowData, setFlag }) => {
   return (
     <div className="card flex justify-content-center">
       <Button
-        label="Edit"
+        label="Editar"
         icon="pi pi-user-edit"
         severity="warning"
         onClick={() => setVisible(true)}
       />
       <Dialog
-        header="Edit Discipline"
+        header="Editar Disciplina"
         visible={visible}
         modal={false}
         style={{ width: "50vw" }}

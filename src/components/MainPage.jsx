@@ -35,9 +35,9 @@ function MainPage() {
           <div className="card">
             <div className="card-body text-center">
               <BsClock size={50} className="card-icon text-success" />
-              <h5 className="card-title">Attendance</h5>
-              <p className="card-text">Administar attendance.</p>
-              <a href="/attendance" className="btn btn-success btn-icon">Ver Attendance</a>
+              <h5 className="card-title">Asistencias</h5>
+              <p className="card-text">Administar asistencias.</p>
+              <a href="/attendance" className="btn btn-success btn-icon">Ver Asistencias</a>
             </div>
           </div>
         </div>
@@ -45,9 +45,9 @@ function MainPage() {
           <div className="card">
             <div className="card-body text-center">
               <BsShield size={50} className="card-icon text-warning" />
-              <h5 className="card-title">Disciplina</h5>
-              <p className="card-text">Administar disciplina.</p>
-              <a href="/discipline" className="btn btn-warning btn-icon">Ver Disciplina</a>
+              <h5 className="card-title">Disciplinas</h5>
+              <p className="card-text">Administar disciplinas.</p>
+              <a href="/discipline" className="btn btn-warning btn-icon">Ver Disciplinas</a>
             </div>
           </div>
         </div>
